@@ -4,6 +4,8 @@ i = 1
 
 while i <= n:
     soma += 1
+    if soma == 5:
+        break
     i = i + 1
 
 print(f"A soma é: ", soma)
