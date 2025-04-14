@@ -1,16 +1,14 @@
-senha = int(input("Digite sua senha do cartão: "))
 tentativas = 1
 pin = 123456
+mensagem="Senha Bloqueada"
 
-while pin != senha:
-    senha = int(input("Senha incorreta! Digite novamente: "))
-    tentativas += 1
-    if tentativas >= 3:
-        print("Tentativas excedidas, saindo do programa...")
+while tentativas <= 3:
+    senha = int(input("Digite sua senha: "))
+    if senha == pin:
+        mensagem = "Bem-vindo"
         break
-
-if pin == senha:
-    print("Bem-vindo")
+    tentativas += 1
+print(mensagem)
 
 
 
